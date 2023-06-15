@@ -14,13 +14,13 @@ export default function HamMenus() {
       animate(
         "li",
         { opacity: [0, 1], x: [100, 0] },
-        { delay: stagger(0.2), duration: 1 }
+        { delay: stagger(0.2), duration: 0.8 }
       );
     }
-  }, [isHamOpen, animate, scope]);
+  },[]);
   return (
     <ul
-      className={`flex flex-col gap-4 uppercase text-xl pt-32 h-screen overflow-x-hidden w-full z-10 transition-all`}
+      className={` bg-black flex flex-col gap-4 uppercase text-xl pt-32 h-screen overflow-hidden w-screen z-10 transition-all lg:hidden`}
       ref={scope}>
       {navLinks.map((link, i) => {
         return (

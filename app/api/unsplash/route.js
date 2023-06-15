@@ -25,4 +25,21 @@ export async function GET(request) {
   
   return NextResponse.json(pictures)
 }
+  // const photos = await getPhotos('offices',2);
 
+
+{/* {photos.map((photo) => {
+ 
+        // console.log(photo.urls.regular)
+        return (
+          <Image
+            key={photo.id}
+        className=' w-auto h-auto'
+
+            src={photo.urls.regular}
+            width={500}
+            height={500}
+            alt="Picture of the author"
+          />
+        );
+      })} */}
