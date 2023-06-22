@@ -1,7 +1,9 @@
-import React from 'react'
+
 
 export default function Careers() {
+  
+  // console.log(imgs)
   return (
-    <div>Careers</div>
+<div>CAREERS</div>
   )
 }

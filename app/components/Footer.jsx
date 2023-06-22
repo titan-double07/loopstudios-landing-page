@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col  items-center justify-center  bg-black py-16 lg:px-20 text-center text-white lg:flex-row lg:justify-between">
       
-      <div className="lg:flex lg:flex-col">
+      <div className="lg:flex lg:flex-col  ">
         <Image
           src={logo}
           alt="loop-studis-logo"

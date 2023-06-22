@@ -7,7 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-   
+      fontFamily: {
+        alata: ['var(--font-alata)'],
+        josefin: ['var(--font-josefinSans)'],
+      },
     },
   },
   plugins: [],
