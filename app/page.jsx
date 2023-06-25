@@ -6,12 +6,11 @@ import { useAppSelector } from "@/redux/hooks";
 export default async function Home() {
   const { splashLoader } = useAppSelector((store) => store.app);
 
-  if (!splashLoader)
- 
-  return (
-    <main className="wrapper flex flex-col py-24  ">
+  
+  return (!splashLoader)? <main className="wrapper flex flex-col py-24  ">
       <Section1 />
       <Section2 />
-    </main>
-  );
+       </main>
+       :<main></main>
+  
 }
