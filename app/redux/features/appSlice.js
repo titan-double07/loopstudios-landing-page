@@ -1,8 +1,11 @@
 // "use client";
 import { createSlice } from '@reduxjs/toolkit';
 
+
+
 const initialState = {
-    isHamOpen:false
+    isHamOpen: false,
+    splashLoader:true
 }
 
 export const appSlice = createSlice({
@@ -12,8 +15,11 @@ export const appSlice = createSlice({
        toggleHamMenu: (state) => {
             state.isHamOpen = !state.isHamOpen
         },
+        setSplashLoader: (state, ) => { 
+            state.splashLoader = false
+        }
     },
 });
 
-export const { toggleHamMenu, } = appSlice.actions;
+export const { toggleHamMenu,setSplashLoader } = appSlice.actions;
 export default appSlice.reducer;

@@ -63,13 +63,12 @@ export default function Section1() {
 
       const timer = setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % data?.length);
-      }, 15000);//15s
+      }, 10000);//15s
       return () => {
         clearTimeout(timer);
       
       };
     }
-
   }, [isInView, currentIndex,data]);
 
 
@@ -83,8 +82,7 @@ export default function Section1() {
           src={!isLoading ? data[currentIndex]?.urls.regular : sectionImage}
           alt={!isLoading?data[currentIndex]?.alt_description:'image'}
           fill
-          loading="lazy"
-          className="w-full  object-cover object-center "
+            className="w-full  object-cover object-center transition-all "
         />
       </div>
       <div className="section1-text bg-white p-3 lg:w-2/4 opacity-0">

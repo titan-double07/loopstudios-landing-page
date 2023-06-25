@@ -8,34 +8,16 @@
 } */
 
 .wrapper {
-  @apply container mx-auto max-w-[1200px] px-6 ;
+  @apply container mx-auto max-w-[1200px] px-6;
 }
-
 
 @media (min-width: 1024px) {
-  /* .header-image {
-    background-image: url(/images/desktop/image-hero.jpg);
-
-  } */
-
+ .random{
+  display: none
+ }
   .section1-text {
-    @apply absolute top-1/3 left-1/2 p-14 text-left;
-  }
-
- 
-}
-/* animation */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    @apply absolute left-1/2 top-1/3 p-14 text-left;
   }
 }
 
-.fade-in {
-  animation-name: fade-in;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-}
+

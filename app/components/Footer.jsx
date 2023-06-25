@@ -1,3 +1,4 @@
+'use client'
 import { navLinks } from "@/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -12,11 +13,13 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useAppSelector } from "@/redux/hooks";
 
 export default function Footer() {
+  const { splashLoader } = useAppSelector((store) => store.app);
+  if (!splashLoader)
   return (
-    <footer className="flex flex-col  items-center justify-center  bg-black py-16 lg:px-20 text-center text-white lg:flex-row lg:justify-between">
-      
+    <footer className="flex flex-col  items-center justify-center  bg-black py-16 text-center text-white lg:flex-row lg:justify-between lg:px-20">
       <div className="lg:flex lg:flex-col  ">
         <Image
           src={logo}
@@ -50,8 +53,10 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Loopstudios.by{" "}
           <a
             href="http://chisomwebdev.vercel.app"
-            className="text-lime-500 underline ">
-            chisomwebdev
+            className="text-lime-500 underline shadow-lime-400  ">
+            <span className="shadow-blue-600/50 drop-shadow-md">
+              chisomwebdev
+            </span>
           </a>
           , using Next.js
         </small>
