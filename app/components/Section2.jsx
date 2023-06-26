@@ -27,29 +27,31 @@ export default function Section2() {
   return (
     <section
       className={`section2 mt-16 flex w-full flex-col gap-7 font-josefin tracking-widest lg:mt-32  `}>
-      <div className=" justify-between lg:flex lg:py-8">
-        <h1 className="m-5 text-center text-3xl  uppercase lg:text-left lg:text-5xl ">
+      <div className=" justify-between lg:flex lg:py-8 ">
+        <h1 className=" text-center text-3xl  uppercase lg:text-left lg:text-5xl ">
           our creations
         </h1>
-        <button className="m-5 hidden w-1/6  border border-black px-5 py-2 font-extrabold uppercase hover:bg-black hover:text-white lg:block">
+        <button className=" hidden w-1/6  border border-black px-5 py-2 font-extrabold uppercase hover:bg-black hover:text-white lg:block">
           see all
         </button>
       </div>
 
       <ul
         scope={card}
-        className="grid h-full w-full grid-cols-1 gap-5  lg:grid-cols-4 lg:gap-8">
+        style={{ overflowX: "hidden" }}
+        className=" py-10 grid h-full w-full grid-cols-1 gap-y-5 lg:grid-cols-4 lg:gap-8">
         {homeImages.map((image, i) => {
           return (
             <motion.li
               key={i}
-              className={`relative h-32 w-full bg-cover bg-center text-2xl uppercase text-white lg:h-[450px]  `}
+              className={`relative mx-auto lg:w-full h-32 w-3/4 bg-cover bg-center text-2xl uppercase text-white lg:h-[450px] `}
               style={{
                 backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0)), url(/images/mobile/${image.text}.jpg)`,
               }}
-              initial={{x:0}}
+              initial={{ x: 0 }}
               whileHover={{
                 y: -30,
+                textShadow: "0px 0px 8px rgb(255,255,255), 0px 0px 10px rgb(255,255,255)"
               }}
               whileInView={animation}
               // viewport={{ root: card }}
