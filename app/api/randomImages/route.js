@@ -14,9 +14,11 @@ export async function GET(request) {
         const query = searchParams.get('query')
         const count = searchParams.get('count')
         console.log(query,count,request.url)
+        //obj=Object.fromEntries(searchParams.entries())
+        //will echo any  parameters passed to the route
         const response = await unsplash.photos.getRandom({
             query: query,
-            count:+count,
+            count:count,
         });
 
         const pictures = response.response

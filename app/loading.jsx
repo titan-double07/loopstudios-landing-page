@@ -4,7 +4,7 @@ import logo from "public/images/logo.svg";
 import Image from "next/image";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { setSplashLoader } from "./redux/features/appSlice";
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 export default function Loading() {
  const dispatch = useAppDispatch()
@@ -64,11 +64,13 @@ export default function Loading() {
     },
   };
 
-  const handleAnimationComplete = () => {
-    // Perform your function here
-    dispatch(setSplashLoader())
-    console.log("Animation complete!");
-  };
+
+    const handleAnimationComplete = () => {
+      // Perform your function here
+      dispatch(setSplashLoader())
+      console.log("Animation complete!");
+    };
+    
 
   return (
       <motion.div
