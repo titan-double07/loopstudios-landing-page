@@ -44,14 +44,15 @@ export default function Section2() {
           return (
             <motion.li
               key={i}
-              className={`relative mx-auto lg:w-full h-32 w-3/4 bg-cover bg-center text-2xl uppercase text-white lg:h-[450px] `}
+              className={`relative mx-auto lg:w-full h-32 w-[90%] bg-cover bg-center text-2xl uppercase text-white lg:h-[450px] `}
               style={{
                 backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0)), url(/images/mobile/${image.text}.jpg)`,
               }}
               initial={{ x: 0 }}
               whileHover={{
                 y: -30,
-                textShadow: "0px 0px 8px rgb(255,255,255), 0px 0px 10px rgb(255,255,255)"
+                textShadow: "0px 0px 8px rgb(255,255,255), 0px 0px 10px rgb(255,255,255)",
+                boxShadow: "0px -5px 8px white, 0px 5px 8px black",
               }}
               whileInView={animation}
               // viewport={{ root: card }}
